@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:background="#F0F0F0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Segurança - Owasp Mobile"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#080377"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Seção de Dados do Aluno -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dados do Aluno"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/etNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nome Completo"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <EditText
+                        android:id="@+id/etRA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="RA (Registro Acadêmico)"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Seção Criptografia AES-256 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Operações com Criptografia AES-256"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Salvar Dados Criptografados -->
+                <Button
+                    android:id="@+id/btnSalvarCripto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Salvar Dados Criptografados"
+                    android:backgroundTint="@color/azul_mario"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Recuperar e Listar Dados -->
+                <Button
+                    android:id="@+id/btnRecuperarCripto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recuperar e Listar Dados"
+                    android:backgroundTint="@color/azul_mario"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Alterar Dados -->
+                <Button
+                    android:id="@+id/btnAtualizarCripto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alterar Dados Criptografados"
+                    android:backgroundTint="@color/azul_mario"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Deletar Dados -->
+                <Button
+                    android:id="@+id/btnDeletarCripto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Deletar Dados Criptografados"
+                    android:backgroundTint="@color/azul_mario"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- TextView para exibir dados recuperados -->
+                <TextView
+                    android:id="@+id/tvDadosCripto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:layout_marginTop="12dp"
+                    android:background="#F5F5F5"
+                    android:padding="12dp"
+                    android:visibility="gone"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Status de Segurança -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status de Segurança"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvStatusSeguranca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Carregando status de segurança..."
+                    android:textSize="13sp"
+                    android:background="#E8F5E9"
+                    android:padding="12dp"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
